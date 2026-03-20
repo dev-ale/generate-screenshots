@@ -127,6 +127,7 @@ generate_screenshot() {
       -gravity Center \
       -font "/tmp/poppins-font/Poppins-Medium.ttf" -pointsize 36 \
       -fill 'rgba(0,0,0,0.2)' -annotate +0+200 "[ ${iphone_file}.png ]" \
+      -background white -alpha remove \
       "$output_path"
 
     echo "  ✅ Placeholder → $output_path"
@@ -151,6 +152,7 @@ generate_screenshot() {
     -fill "$HEADLINE_COLOR" -annotate +0+${top_pad} "$headline" \
     -gravity North -font "$FONT_SUBTITLE" -pointsize $SUBTITLE_SIZE \
     -fill "$SUBTITLE_COLOR" -annotate +0+${subtitle_y} "$subtitle" \
+    -background white -alpha remove \
     "$output_path"
 
   echo "  ✅ Generated → $output_path"
